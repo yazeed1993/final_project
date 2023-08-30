@@ -141,6 +141,18 @@ while True:
             student_number = input("Enter Student Number")
             # TODO 14 find the target student using loops and get student average  if exist , if not print ("Student Not Exist")
 
+            target_student = None
+            for student in students:
+                if student.student_number == student_number:
+                    target_student = student
+                    break
+
+            if target_student:
+                student_average = target_student.get_student_average()
+                print(f"Student Average Mark: {student_average}")
+            else:
+                print("Student Not Found")
+
         elif selection == 5:
             student_number = input("Enter Student Number")
             # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
