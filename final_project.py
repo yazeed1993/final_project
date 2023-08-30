@@ -41,14 +41,15 @@ class Student:
         course = Course(course_name, course_mark)
         self.courses_list.append(course)
     # method to get_student_details as dict
-    
+
     def get_student_details(self):
         return self.__dict__
 
     # method to get_student_courses
     def get_student_courses(self):
         # TODO 6 print student courses with their marks
-        pass
+        for course in self.courses_list:
+            print(f"Course Name: {course.course_name}, Mark: {course.course_mark}")
 
     # method to get student_average as a value
     def get_student_average(self):
