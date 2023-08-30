@@ -157,6 +157,24 @@ while True:
             student_number = input("Enter Student Number")
             # TODO 15 ask user to enter course name and course mark then create coures object then append it to target student courses
 
+            target_student = None
+            for student in students:
+                if student.student_number == student_number:
+                    target_student = student
+                    break
+
+            if target_student:
+                course_name = input("Enter Course Name: ")
+                try:
+                    course_mark = float(input("Enter Course Mark: "))
+                    target_student.enroll_course(course_name, course_mark)
+                    print("Course Added to Student")
+                except ValueError:
+                    print("Invalid Value. Please enter a valid number for the course mark.")
+
+            else:
+                print("Student Not Found")
+
         else:
             # TODO 16 call a function to exit the program
             pass
