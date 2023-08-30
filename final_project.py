@@ -175,6 +175,12 @@ while True:
             else:
                 print("Student Not Found")
 
-        else:
+        elif selection == 6:
             # TODO 16 call a function to exit the program
-            pass
+            break
+
+        else:
+            print("Invalid selection. Please choose a valid option.")
+
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
